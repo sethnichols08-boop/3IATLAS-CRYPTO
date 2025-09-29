@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import WalletManager from './components/WalletManager.jsx';
 import TokenTransfer from './components/TokenTransfer.jsx';
+import Demo from './components/Demo.jsx';
 import './styles/App.css';
 
 const App = () => {
-  const [activeTab, setActiveTab] = useState('wallets');
+  const [activeTab, setActiveTab] = useState('demo');
 
   return (
     <div className="app">
@@ -14,6 +15,12 @@ const App = () => {
           <p>A crypto revolution combining Bitcoin's security, Ethereum's smart contracts, Shiba Inu's community, and Solana's speed</p>
         </div>
         <nav className="nav-tabs">
+          <button 
+            className={`nav-tab ${activeTab === 'demo' ? 'active' : ''}`}
+            onClick={() => setActiveTab('demo')}
+          >
+            Demo
+          </button>
           <button 
             className={`nav-tab ${activeTab === 'wallets' ? 'active' : ''}`}
             onClick={() => setActiveTab('wallets')}
@@ -36,6 +43,7 @@ const App = () => {
       </header>
 
       <main className="app-main">
+        {activeTab === 'demo' && <Demo />}
         {activeTab === 'wallets' && <WalletManager />}
         {activeTab === 'transfer' && <TokenTransfer />}
         {activeTab === 'about' && (
