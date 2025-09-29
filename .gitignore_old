@@ -1,0 +1,43 @@
+3iatlas-frontend/
+├── public/
+│   ├── index.html          # Entry point with <div id="root"></div>
+│   └── favicon.ico
+├── src/
+│   ├── components/         # Reusable UI pieces
+│   │   ├── HUD/            # Interactive overlay
+│   │   │   ├── MiningHUD.jsx
+│   │   │   ├── ExchangeHUD.jsx
+│   │   │   └── NotificationPanel.jsx
+│   │   ├── WalletConnect.jsx
+│   │   ├── Miner/
+│   │   │   └── MinerControls.jsx  # Start/stop mining buttons
+│   │   ├── Exchange/
+│   │   │   ├── SwapForm.jsx      # Token swap input
+│   │   │   └── LiquidityChart.jsx # Chart.js for pools
+│   │   ├── Chat/
+│   │   │   └── AIAgentChat.jsx   # ChainGPT/ElizaOS bot
+│   │   └── common/
+│   │       ├── Header.jsx        # Nav bar with wallet status
+│   │       └── Footer.jsx
+│   ├── hooks/               # Custom React hooks
+│   │   ├── useWallet.js     # Wallet connection logic
+│   │   ├── useMiner.js      # PoW mining state
+│   │   └── useAI.js         # Agent interactions
+│   ├── pages/               # Routed views
+│   │   ├── Home.jsx         # Dashboard overview
+│   │   ├── Mine.jsx         # Mining page
+│   │   ├── Swap.jsx         # Exchange page
+│   │   └── Chat.jsx         # AI help center
+│   ├── services/            # API integrations
+│   │   ├── web3Service.js   # Ethers.js for contracts
+│   │   ├── minerAPI.js      # Backend miner calls
+│   │   └── aiService.js     # ChainGPT/ElizaOS
+│   ├── utils/
+│   │   └── constants.js     # Token supply, chains
+│   ├── App.js               # Root with Router & providers
+│   ├── index.js             # Render root
+│   └── styles/              # Tailwind globals
+│       └── globals.css
+├── .env                     # Secrets
+├── README.md                # Setup guide
+└── package.json
