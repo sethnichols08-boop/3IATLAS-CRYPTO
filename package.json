@@ -1,0 +1,53 @@
+{
+  "name": "3iatlas-crypto",
+  "version": "1.0.0",
+  "description": "3IATLAS: A crypto revolution combining Bitcoin's security, Ethereum's smart contracts, Shiba Inu's community, and Solana's speed",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest",
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development",
+    "serve": "webpack serve --mode development",
+    "deploy:devnet": "npm run build && node scripts/deploy-devnet.js",
+    "deploy:mainnet": "npm run build && node scripts/deploy-mainnet.js"
+  },
+  "keywords": [
+    "cryptocurrency",
+    "solana",
+    "spl-token",
+    "blockchain",
+    "defi",
+    "3iatlas"
+  ],
+  "author": "sethnichols08-boop",
+  "license": "MIT",
+  "dependencies": {
+    "@solana/web3.js": "^1.87.6",
+    "@solana/spl-token": "^0.3.9",
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-react": "^0.15.32",
+    "@solana/wallet-adapter-react-ui": "^0.9.31",
+    "@solana/wallet-adapter-wallets": "^0.19.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "bs58": "^5.0.0",
+    "buffer": "^6.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.0",
+    "webpack-dev-server": "^4.15.0",
+    "html-webpack-plugin": "^5.5.0",
+    "css-loader": "^6.8.0",
+    "style-loader": "^3.3.0",
+    "@babel/core": "^7.22.0",
+    "@babel/preset-env": "^7.22.0",
+    "@babel/preset-react": "^7.22.0",
+    "babel-loader": "^9.1.0",
+    "jest": "^29.6.0",
+    "nodemon": "^3.0.0"
+  }
+}

@@ -1,43 +1,41 @@
-3iatlas-frontend/
-├── public/
-│   ├── index.html          # Entry point with <div id="root"></div>
-│   └── favicon.ico
-├── src/
-│   ├── components/         # Reusable UI pieces
-│   │   ├── HUD/            # Interactive overlay
-│   │   │   ├── MiningHUD.jsx
-│   │   │   ├── ExchangeHUD.jsx
-│   │   │   └── NotificationPanel.jsx
-│   │   ├── WalletConnect.jsx
-│   │   ├── Miner/
-│   │   │   └── MinerControls.jsx  # Start/stop mining buttons
-│   │   ├── Exchange/
-│   │   │   ├── SwapForm.jsx      # Token swap input
-│   │   │   └── LiquidityChart.jsx # Chart.js for pools
-│   │   ├── Chat/
-│   │   │   └── AIAgentChat.jsx   # ChainGPT/ElizaOS bot
-│   │   └── common/
-│   │       ├── Header.jsx        # Nav bar with wallet status
-│   │       └── Footer.jsx
-│   ├── hooks/               # Custom React hooks
-│   │   ├── useWallet.js     # Wallet connection logic
-│   │   ├── useMiner.js      # PoW mining state
-│   │   └── useAI.js         # Agent interactions
-│   ├── pages/               # Routed views
-│   │   ├── Home.jsx         # Dashboard overview
-│   │   ├── Mine.jsx         # Mining page
-│   │   ├── Swap.jsx         # Exchange page
-│   │   └── Chat.jsx         # AI help center
-│   ├── services/            # API integrations
-│   │   ├── web3Service.js   # Ethers.js for contracts
-│   │   ├── minerAPI.js      # Backend miner calls
-│   │   └── aiService.js     # ChainGPT/ElizaOS
-│   ├── utils/
-│   │   └── constants.js     # Token supply, chains
-│   ├── App.js               # Root with Router & providers
-│   ├── index.js             # Render root
-│   └── styles/              # Tailwind globals
-│       └── globals.css
-├── .env                     # Secrets
-├── README.md                # Setup guide
-└── package.json
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Production build
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Deployment files (contain sensitive keys)
+deployment-*.json
+keypairs/
+wallets/
+
+# Test coverage
+coverage/
+
+# Temporary files
+tmp/
+temp/
